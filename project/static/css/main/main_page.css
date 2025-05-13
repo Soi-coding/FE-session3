@@ -11,21 +11,18 @@
 .top-category-box {
   border: 1px solid #e2e2e2;
   display: flex;
-  padding: 30px 40px;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  padding: 50px 40px;
+  margin: 50px 0;
   align-items: flex-start;
-  gap: 16px 83px;
+  gap: 24px 83px;
   align-self: stretch;
   flex-wrap: wrap;
 }
 
 .top-category {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 16px 83px;
-  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 83px;
   width: 100%;
 }
 
@@ -37,15 +34,16 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: -1px;
+  cursor: pointer;
 }
 
 .top-category-box .top-category span:hover {
-  color: #8b00ff;
+  color: #5e0080 !important;
   text-decoration: underline;
 }
 
 .top-category-box .top-category span.active {
-  color: #8b00ff;
+  color: #5e0080 !important;
   font-weight: 600;
 }
 
@@ -64,15 +62,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 47px;
-  color: var(--font-font-1, #333);
-  font-family: Pretendard;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
   border-bottom: 1px solid var(--stroke-stroke-2, #e2e2e2);
-  padding-bottom: 20px; /* 살짝 띄우기 */
 }
 
 .filter-header .reset {
@@ -157,6 +147,8 @@
   width: calc(100% - 240px);
   box-sizing: border-box;
   padding: 0;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
 .product-header {
@@ -215,19 +207,23 @@
   gap: 40px;
   width: 100%;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
-.product-card {
+.product-card a {
   display: flex;
   flex-direction: column;
   background-color: #fff;
   border: none;
   position: relative;
+  gap: 10px;
 }
 
 .product-card img {
-  width: 249px;
-  height: 320px;
+  width: 100%;
+  max-width: 249px;
+  height: auto;
+  aspect-ratio: 249/320;
   object-fit: cover;
 }
 
@@ -235,14 +231,13 @@
   width: 100%;
   padding: 6px 0;
   border: 1px solid #ddd;
-  margin-top: 10px;
   background-color: #fff;
   cursor: pointer;
   font-family: Pretendard;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   color: var(--font-font-1, #333);
   display: flex;
   justify-content: center;
@@ -268,7 +263,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
   letter-spacing: -1px;
 }
 
@@ -278,7 +273,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
 
 .product-desc {
@@ -287,7 +282,7 @@
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 133.333% */
+  line-height: 16px;
 }
 
 .origin-price {
@@ -296,7 +291,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   text-decoration-line: line-through;
 }
 
@@ -312,7 +307,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
 
 .discount {
@@ -321,5 +316,5 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
